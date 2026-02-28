@@ -11,6 +11,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import LoadingBar from "./components/LoadingBar";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
+import Products from "./pages/Products";
 import Projects from "./pages/Projects";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
@@ -44,6 +45,7 @@ const AppRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<PageWrapper><Index /></PageWrapper>} />
         <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
+        <Route path="/products" element={<PageWrapper><Products /></PageWrapper>} />
         <Route path="/projects" element={<PageWrapper><Projects /></PageWrapper>} />
         <Route path="/blog" element={<PageWrapper><Blog /></PageWrapper>} />
         <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />

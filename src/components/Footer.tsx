@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock, Facebook } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 
 const Footer = () => (
@@ -21,6 +21,9 @@ const Footer = () => (
             <a href="https://www.facebook.com/profile.php?id=61586311246809" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-footer-foreground/10 hover:bg-secondary flex items-center justify-center transition-colors" aria-label="Facebook">
               <Facebook className="h-4 w-4" />
             </a>
+            <a href="https://www.instagram.com/aapools?igsh=MTF5dXp2YWl0Mjh5aw==" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-footer-foreground/10 hover:bg-secondary flex items-center justify-center transition-colors" aria-label="Instagram">
+              <Instagram className="h-4 w-4" />
+            </a>
           </div>
         </div>
 
@@ -31,6 +34,7 @@ const Footer = () => (
             {[
               { to: "/", label: "Home" },
               { to: "/services", label: "Services" },
+              { to: "/products", label: "Products" },
               { to: "/projects", label: "Projects" },
               { to: "/blog", label: "Blog" },
               { to: "/about", label: "About Us" },

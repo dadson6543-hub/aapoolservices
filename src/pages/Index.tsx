@@ -107,15 +107,34 @@ const Index = () => {
       </div>
     </section>
 
+    {/* Serving All Over Pakistan Banner */}
+    <section className="section-padding bg-primary text-primary-foreground">
+      <div className="container-max text-center">
+        <ScrollAnimation>
+          <div className="flex flex-col items-center gap-4">
+            <div className="flex items-center gap-3 flex-wrap justify-center">
+              <span className="bg-secondary text-secondary-foreground px-4 py-1.5 text-xs font-heading font-bold tracking-wider uppercase">Registered Company</span>
+              <span className="bg-secondary text-secondary-foreground px-4 py-1.5 text-xs font-heading font-bold tracking-wider uppercase">Swimming Pool Experts</span>
+              <span className="bg-secondary text-secondary-foreground px-4 py-1.5 text-xs font-heading font-bold tracking-wider uppercase">All Over Pakistan</span>
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold">Serving All Over Pakistan</h2>
+            <p className="text-primary-foreground/80 max-w-2xl mx-auto">
+              AA Pool Service is a registered and trusted swimming pool company providing expert pool construction, maintenance, filtration, and equipment services across Pakistan — from Lahore to Karachi, Islamabad to Peshawar.
+            </p>
+          </div>
+        </ScrollAnimation>
+      </div>
+    </section>
+
     {/* About Summary */}
     <section className="section-padding bg-background">
       <div className="container-max text-center">
         <ScrollAnimation>
-          <h2 className="section-title">Lahore's Trusted Pool Experts</h2>
+          <h2 className="section-title">Pakistan's Trusted Pool Experts</h2>
         </ScrollAnimation>
         <ScrollAnimation delay={0.1}>
           <p className="section-subtitle mx-auto">
-            With over a decade of experience, AA Pool Service delivers world-class swimming pool solutions across DHA Lahore.
+            With over a decade of experience, AA Pool Service delivers world-class swimming pool solutions across Pakistan.
             From design and construction to maintenance and filtration, we are your one-stop pool partner.
           </p>
         </ScrollAnimation>
