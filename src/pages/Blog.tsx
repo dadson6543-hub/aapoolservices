@@ -3,22 +3,21 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar } from "lucide-react";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import SEOHead from "@/components/SEOHead";
-import heroImg from "@/assets/project-residential.jpg";
-import cleaningImg from "@/assets/project-home-pool.jpg";
-import filtrationImg from "@/assets/project-commercial.jpg";
-import renovationImg from "@/assets/project-luxury-pool.jpg";
-import constructionImg from "@/assets/project-farmhouse.jpg";
-import lightingImg from "@/assets/project-modern-pool.jpg";
-import chemicalImg from "@/assets/project-spa.jpg";
-import equipmentImg from "@/assets/pool-equipment.jpg";
-import leakImg from "@/assets/pool-leak.jpg";
+import blogBenefitsImg from "@/assets/blog-pool-benefits.jpg";
+import blogMaintenanceImg from "@/assets/blog-pool-maintenance.jpg";
+import blogFiltrationImg from "@/assets/blog-filtration.jpg";
+import blogCleaningImg from "@/assets/blog-cleaning.jpg";
+import blogHealthImg from "@/assets/blog-health.jpg";
+import blogRenovationImg from "@/assets/blog-renovation.jpg";
+import blogDesignImg from "@/assets/blog-design.jpg";
+import blogChemicalImg from "@/assets/blog-chemical.jpg";
 
 const blogPosts = [
   {
     slug: "benefits-swimming-pool-at-home",
     title: "Benefits of Having a Swimming Pool at Home",
     excerpt: "Discover the numerous advantages of installing a swimming pool at your home, from health benefits to property value.",
-    img: heroImg,
+    img: blogBenefitsImg,
     date: "February 20, 2026",
     content: `Having a swimming pool at home is more than just a luxury — it's an investment in your family's health, happiness, and property value. In cities like Lahore, where summer temperatures regularly exceed 40°C, a home pool offers an invaluable escape from the heat.
 
@@ -56,7 +55,7 @@ Contact AA Pool Service at 0328-9471436 to discuss your dream pool project today
     slug: "importance-regular-pool-maintenance",
     title: "Importance of Regular Pool Maintenance",
     excerpt: "Learn why consistent pool maintenance is crucial for water quality, equipment longevity, and swimmer safety.",
-    img: cleaningImg,
+    img: blogMaintenanceImg,
     date: "February 15, 2026",
     content: `Regular pool maintenance is not optional — it's essential for protecting your investment, ensuring water safety, and extending the life of your pool equipment. Many pool owners in Lahore underestimate the importance of consistent care, leading to costly repairs and health hazards.
 
@@ -98,7 +97,7 @@ Schedule your pool maintenance with AA Pool Service by calling 0328-9471436.`,
     slug: "how-pool-filtration-systems-work",
     title: "How Pool Filtration Systems Work",
     excerpt: "A comprehensive guide to understanding pool filtration technology and choosing the right system for your pool.",
-    img: filtrationImg,
+    img: blogFiltrationImg,
     date: "February 10, 2026",
     content: `Understanding how pool filtration systems work helps you make informed decisions about your pool's water treatment. A quality filtration system is the backbone of clean, safe pool water, and choosing the right one depends on your pool size, usage, and budget.
 
@@ -139,7 +138,7 @@ Contact AA Pool Service at 0328-9471436 for expert filtration system consultatio
     slug: "best-pool-cleaning-techniques",
     title: "Best Pool Cleaning Techniques",
     excerpt: "Master professional pool cleaning methods to maintain crystal-clear water in your swimming pool.",
-    img: cleaningImg,
+    img: blogCleaningImg,
     date: "February 5, 2026",
     content: `Maintaining a clean swimming pool requires the right techniques, tools, and schedule. Whether you're handling routine upkeep or tackling a neglected pool, these professional cleaning methods will help you achieve and maintain crystal-clear water.
 
@@ -188,7 +187,7 @@ Book your professional pool cleaning with AA Pool Service: 0328-9471436.`,
     slug: "health-benefits-of-swimming",
     title: "Health Benefits of Swimming",
     excerpt: "Explore the remarkable physical and mental health benefits that regular swimming provides for all ages.",
-    img: heroImg,
+    img: blogHealthImg,
     date: "January 30, 2026",
     content: `Swimming is widely regarded as one of the most beneficial forms of exercise, offering a unique combination of cardiovascular fitness, strength training, and mental wellness. For pool owners in Lahore, understanding these benefits reinforces the value of their investment.
 
@@ -234,7 +233,7 @@ Ready for your fitness pool? Call AA Pool Service at 0328-9471436.`,
     slug: "signs-pool-needs-renovation",
     title: "Signs Your Pool Needs Renovation",
     excerpt: "Recognize the warning signs that indicate your swimming pool needs professional renovation and upgrading.",
-    img: renovationImg,
+    img: blogRenovationImg,
     date: "January 25, 2026",
     content: `Every swimming pool has a lifespan for its various components. Recognizing the signs that your pool needs renovation can save you from costly emergency repairs and ensure your pool remains safe, functional, and beautiful. Here are the key indicators that it's time to renovate.
 
@@ -280,7 +279,7 @@ Schedule your pool renovation consultation: 0328-9471436.`,
     slug: "choosing-right-pool-design",
     title: "Choosing the Right Pool Design",
     excerpt: "A guide to selecting the perfect pool design that matches your lifestyle, property, and budget.",
-    img: constructionImg,
+    img: blogDesignImg,
     date: "January 20, 2026",
     content: `Choosing the right pool design is one of the most important decisions you'll make as a homeowner. The perfect pool complements your property's architecture, suits your lifestyle, and fits your budget. Here's a comprehensive guide to help you make the right choice.
 
@@ -335,7 +334,7 @@ Start designing your perfect pool today. Call AA Pool Service at 0328-9471436.`,
     slug: "importance-water-chemical-balance",
     title: "Importance of Water Chemical Balance",
     excerpt: "Understanding why maintaining proper chemical balance in your pool water is essential for safety and longevity.",
-    img: chemicalImg,
+    img: blogChemicalImg,
     date: "January 15, 2026",
     content: `Water chemical balance is the foundation of a safe, comfortable, and durable swimming pool. Understanding the key chemical parameters and their interactions helps pool owners maintain optimal water conditions and protect their investment.
 
