@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, Facebook } from "lucide-react";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import SEOHead from "@/components/SEOHead";
 import { toast } from "sonner";
@@ -145,6 +145,12 @@ const Contact = () => {
                         <span className="text-sm text-muted-foreground">Monday – Saturday: 10:00 AM – 6:00 PM</span>
                       </div>
                     </div>
+                  </div>
+                  <h4 className="font-heading font-semibold text-sm text-foreground mt-4 mb-2">Follow Us</h4>
+                  <div className="flex items-center gap-3">
+                    <a href="https://www.facebook.com/profile.php?id=61586311246809" target="_blank" rel="noopener noreferrer" className="w-10 h-10 gradient-primary flex items-center justify-center hover:opacity-90 transition-opacity" aria-label="Facebook">
+                      <Facebook className="h-4 w-4 text-primary-foreground" />
+                    </a>
                   </div>
                 </div>
 
