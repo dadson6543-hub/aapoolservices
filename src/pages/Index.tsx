@@ -1,13 +1,18 @@
+import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { CheckCircle, Shield, Star, ArrowRight, Phone } from "lucide-react";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import SEOHead from "@/components/SEOHead";
 import FAQSection from "@/components/FAQSection";
-import heroImg from "@/assets/hero-pool.jpg";
+import heroImg1 from "@/assets/hero-pool.jpg";
+import heroImg2 from "@/assets/hero-pool-2.jpg";
+import heroImg3 from "@/assets/hero-pool-3.jpg";
 import constructionImg from "@/assets/pool-construction.jpg";
 import cleaningImg from "@/assets/pool-cleaning.jpg";
 import filtrationImg from "@/assets/filtration-plant.jpg";
 import renovationImg from "@/assets/pool-renovation.jpg";
+
+const heroSlides = [heroImg1, heroImg2, heroImg3];
 
 const featuredServices = [
   { title: "Pool Construction", desc: "Custom-built swimming pools designed to your specifications with premium materials.", img: constructionImg, slug: "pool-construction" },
@@ -25,11 +30,23 @@ const whyChooseUs = [
 
 const testimonials = [
   { name: "Ahmed Khan", location: "DHA Phase 6", text: "AA Pool Service built an incredible pool for our family. Professional from start to finish." },
-  { name: "Fatima Ali", location: "DHA Phase 8", text: "Their maintenance service keeps our pool pristine. Highly recommended for any pool owner in Lahore." },
-  { name: "Usman Malik", location: "DHA Phase 5", text: "The filtration system they installed works flawlessly. Excellent craftsmanship and fair pricing." },
+  { name: "Fatima Ali", location: "Bahria Town", text: "Their maintenance service keeps our pool pristine. Highly recommended for any pool owner in Lahore." },
+  { name: "Usman Malik", location: "Gulberg", text: "The filtration system they installed works flawlessly. Excellent craftsmanship and fair pricing." },
 ];
 
-const Index = () => (
+const Index = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 3000);
+    return () => clearInterval(timer);
+  }, [nextSlide]);
+
+  return (
   <>
     <SEOHead
       title="AA Pool Service | Professional Pool Construction & Maintenance in Lahore"
@@ -37,12 +54,18 @@ const Index = () => (
       path="/"
     />
 
-    {/* Hero */}
+    {/* Hero with Auto Slider */}
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0">
-        <img src={heroImg} alt="Professional swimming pool by AA Pool Service Lahore" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-[hsl(var(--hero-overlay)/0.75)]" />
-      </div>
+      {heroSlides.map((img, i) => (
+        <div
+          key={i}
+          className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+          style={{ opacity: currentSlide === i ? 1 : 0 }}
+        >
+          <img src={img} alt={`Professional swimming pool ${i + 1}`} className="w-full h-full object-cover" />
+        </div>
+      ))}
+      <div className="absolute inset-0 bg-[hsl(var(--hero-overlay)/0.75)]" />
       <div className="relative z-10 container-max px-4 sm:px-6 lg:px-8 text-center">
         <ScrollAnimation>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-heading font-bold text-primary-foreground leading-tight mb-4">
@@ -70,6 +93,17 @@ const Index = () => (
             </Link>
           </div>
         </ScrollAnimation>
+        {/* Dots */}
+        <div className="flex items-center justify-center gap-2.5 mt-8">
+          {heroSlides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentSlide(i)}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${currentSlide === i ? "bg-secondary scale-125" : "bg-primary-foreground/40 hover:bg-primary-foreground/60"}`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
 
@@ -205,6 +239,7 @@ const Index = () => (
       </div>
     </section>
   </>
-);
+  );
+};
 
 export default Index;
