@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle, Shield, Star, ArrowRight, Phone } from "lucide-react";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import SEOHead from "@/components/SEOHead";
+import FAQSection from "@/components/FAQSection";
 import heroImg from "@/assets/hero-pool.jpg";
 import constructionImg from "@/assets/pool-construction.jpg";
 import cleaningImg from "@/assets/pool-cleaning.jpg";
@@ -172,6 +173,9 @@ const Index = () => (
         </div>
       </div>
     </section>
+
+    {/* FAQ Section */}
+    <FAQSection />
 
     {/* CTA Banner */}
     <section className="gradient-primary section-padding">

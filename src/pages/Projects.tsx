@@ -1,27 +1,23 @@
 import { useState } from "react";
-import { X } from "lucide-react";
+import { X, MapPin } from "lucide-react";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import SEOHead from "@/components/SEOHead";
-import constructionImg from "@/assets/pool-construction.jpg";
-import renovationImg from "@/assets/pool-renovation.jpg";
-import cleaningImg from "@/assets/pool-cleaning.jpg";
-import filtrationImg from "@/assets/filtration-plant.jpg";
-import equipmentImg from "@/assets/pool-equipment.jpg";
-import lightingImg from "@/assets/pool-lighting.jpg";
-import heroImg from "@/assets/hero-pool.jpg";
-import chemicalImg from "@/assets/pool-chemical.jpg";
-import leakImg from "@/assets/pool-leak.jpg";
+import luxuryPoolImg from "@/assets/project-luxury-pool.jpg";
+import homePoolImg from "@/assets/project-home-pool.jpg";
+import spaImg from "@/assets/project-spa.jpg";
+import farmhouseImg from "@/assets/project-farmhouse.jpg";
+import modernPoolImg from "@/assets/project-modern-pool.jpg";
+import commercialImg from "@/assets/project-commercial.jpg";
+import residentialImg from "@/assets/project-residential.jpg";
 
 const projects = [
-  { id: 1, title: "Luxury Residential Pool – DHA Phase 6", img: heroImg, category: "Construction", location: "DHA Phase 6, Lahore", desc: "A stunning 40x20 ft residential pool with infinity edge, mosaic tile work, and integrated LED lighting system.", details: "Complete construction from excavation to finishing. Includes automated filtration, heating system, and landscape integration.", tech: ["Reinforced Concrete", "Mosaic Tiles", "LED Lighting", "Auto Filtration"] },
-  { id: 2, title: "Commercial Pool Construction – DHA Phase 8", img: constructionImg, category: "Construction", location: "DHA Phase 8, Lahore", desc: "Olympic-standard commercial pool with professional lane markings, diving boards, and competition-grade filtration.", details: "Built to international standards with 6-lane configuration, anti-wave lane ropes, and touchpad timing system integration.", tech: ["Olympic Standards", "Anti-Wave System", "Commercial Filtration", "Timing Integration"] },
-  { id: 3, title: "Pool Renovation – Modern Redesign", img: renovationImg, category: "Renovation", location: "DHA Phase 5, Lahore", desc: "Complete transformation of a 15-year-old pool with modern Italian tiles, underwater lighting, and resurfaced deck.", details: "Stripped old tiles, repaired structural cracks, applied waterproof membrane, installed premium Italian porcelain tiles and color-changing LEDs.", tech: ["Italian Porcelain", "Waterproof Membrane", "RGB LEDs", "Deck Resurfacing"] },
-  { id: 4, title: "Filtration Plant Installation", img: filtrationImg, category: "Filtration", location: "DHA Phase 7, Lahore", desc: "Industrial-grade multi-stage filtration system for a large community pool serving 200+ households.", details: "Three-stage filtration with sand filters, UV sterilization, and automated chemical dosing for consistent water quality.", tech: ["Sand Filters", "UV Sterilization", "Auto Dosing", "Remote Monitoring"] },
-  { id: 5, title: "Pool Cleaning & Restoration", img: cleaningImg, category: "Maintenance", location: "DHA Phase 8, Lahore", desc: "Deep cleaning and restoration of a neglected pool, bringing it back to pristine condition in 48 hours.", details: "Acid wash, tile scrubbing, filter replacement, chemical rebalancing, and equipment servicing for a complete restoration.", tech: ["Acid Wash", "Filter Replacement", "Chemical Balance", "Equipment Service"] },
-  { id: 6, title: "Underwater Lighting System", img: lightingImg, category: "Lighting", location: "DHA Phase 6, Lahore", desc: "Custom RGB underwater LED system with remote control and programmable light shows for a luxury villa pool.", details: "12 submersible LED fixtures installed with waterproof wiring, smart controller, and integration with home automation.", tech: ["Smart LEDs", "Home Automation", "Waterproof Wiring", "App Control"] },
-  { id: 7, title: "Pool Equipment Overhaul", img: equipmentImg, category: "Equipment", location: "DHA Phase 5, Lahore", desc: "Complete equipment room renovation with new energy-efficient pump, heater, and automation control panel.", details: "Replaced aging equipment with variable-speed pump, gas heater, salt chlorinator, and touchscreen control panel.", tech: ["Variable Speed Pump", "Gas Heater", "Salt Chlorinator", "Touch Control"] },
-  { id: 8, title: "Water Treatment System", img: chemicalImg, category: "Treatment", location: "DHA Phase 8, Lahore", desc: "Advanced water treatment system with automated pH and chlorine monitoring for a resort-style pool.", details: "Installed real-time water quality sensors, automated chemical dispensers, and cloud-based monitoring dashboard.", tech: ["Real-Time Sensors", "Auto Dispensers", "Cloud Dashboard", "pH Monitoring"] },
-  { id: 9, title: "Leak Detection & Repair", img: leakImg, category: "Maintenance", location: "DHA Phase 7, Lahore", desc: "Successfully identified and repaired multiple underground leaks using electronic detection equipment.", details: "Used pressure testing and electronic listening devices to pinpoint leaks. Performed targeted excavation and pipe replacement.", tech: ["Electronic Detection", "Pressure Testing", "Pipe Replacement", "Waterproofing"] },
+  { id: 1, title: "A-Frame Luxury Pool Villa", img: luxuryPoolImg, category: "Construction", location: "DHA Phase 6, Lahore", desc: "Stunning A-frame villa pool with turquoise mosaic tiles, infinity edge, and integrated landscape design.", details: "Complete custom pool construction featuring premium mosaic tilework, glass panel fencing, integrated deck lighting, and automated filtration system. Built with reinforced concrete shell and waterproof membrane.", tech: ["Mosaic Tiles", "Infinity Edge", "LED Lighting", "Auto Filtration"] },
+  { id: 2, title: "Estate Mansion Pool & Deck", img: homePoolImg, category: "Construction", location: "DHA Phase 8, Lahore", desc: "Grand residential pool with diving board, fire pit lounge area, and full outdoor entertainment deck.", details: "Olympic-inspired rectangular pool with professional diving board, surrounding stone deck, integrated fire pit, and smart pool automation. Premium finishes throughout.", tech: ["Stone Deck", "Diving Board", "Fire Pit", "Smart Automation"] },
+  { id: 3, title: "Hydropool Spa & Swim Spa", img: spaImg, category: "Spa Installation", location: "DHA Phase 5, Lahore", desc: "Premium hydropool swim spa installation with custom wooden deck surround and jet massage system.", details: "Installed a top-of-the-line swim spa with adjustable current for exercise swimming, hydrotherapy jets, built-in LED mood lighting, and custom cedar deck with integrated steps.", tech: ["Hydrotherapy Jets", "Swim Current", "Cedar Deck", "LED Mood Lights"] },
+  { id: 4, title: "Farmhouse Classic Pool", img: farmhouseImg, category: "Construction", location: "DHA Phase 7, Lahore", desc: "Elegant farmhouse-style pool with clean lines, covered patio integration, and lush landscape setting.", details: "Designed and built a classic rectangular pool perfectly integrated with the farmhouse architecture. Features include automated water leveling, energy-efficient pump, and professional landscape integration.", tech: ["Auto Water Level", "Energy-Efficient Pump", "Landscape Design", "Patio Integration"] },
+  { id: 5, title: "Modern A-Frame Resort Pool", img: modernPoolImg, category: "Construction", location: "DHA Phase 6, Lahore", desc: "Contemporary resort-style pool with geometric tile pattern, glass architecture integration, and zen garden.", details: "A bold modern design featuring custom blue-green geometric tiles, seamless indoor-outdoor connection through glass walls, decorative planters, and multi-zone lighting system.", tech: ["Geometric Tiles", "Glass Integration", "Zen Garden", "Multi-Zone Lighting"] },
+  { id: 6, title: "Competition Swimming Pool", img: commercialImg, category: "Commercial", location: "DHA Phase 8, Lahore", desc: "Professional-grade competition pool with lane markings, underwater visibility, and Olympic-standard filtration.", details: "Built to international competition standards with 6-lane configuration, anti-wave lane ropes, underwater cameras, touchpad timing integration, and commercial-grade multi-stage filtration.", tech: ["Olympic Standards", "Anti-Wave System", "Underwater Cameras", "Commercial Filtration"] },
+  { id: 7, title: "Night-Lit Resort Pool", img: residentialImg, category: "Lighting & Renovation", location: "DHA Phase 5, Lahore", desc: "Breathtaking resort-style pool with ambient night lighting, poolside lanterns, and tropical landscaping.", details: "Complete pool renovation with premium underwater LED system, pathway lanterns, mature tropical planting, infinity edge upgrade, and automated chemical management for crystal-clear water.", tech: ["Ambient LEDs", "Tropical Landscaping", "Infinity Edge", "Auto Chemical Management"] },
 ];
 
 const Projects = () => {
@@ -51,15 +47,26 @@ const Projects = () => {
               <ScrollAnimation key={p.id} delay={i * 0.05}>
                 <button
                   onClick={() => setSelected(p)}
-                  className="w-full text-left bg-card card-slight-radius overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 group"
+                  className="w-full text-left bg-card card-slight-radius overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group relative"
                 >
-                  <div className="overflow-hidden">
-                    <img src={p.img} alt={p.title} className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div className="overflow-hidden relative">
+                    <img src={p.img} alt={p.title} className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+                    {/* Hover overlay with details */}
+                    <div className="absolute inset-0 bg-foreground/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-5 text-center">
+                      <span className="text-xs font-heading font-semibold text-secondary uppercase tracking-wide mb-2">{p.category}</span>
+                      <h3 className="font-heading font-bold text-primary-foreground text-lg mb-2">{p.title}</h3>
+                      <p className="text-sm text-primary-foreground/80 line-clamp-3 mb-3">{p.desc}</p>
+                      <div className="flex items-center gap-1 text-xs text-primary-foreground/70">
+                        <MapPin className="h-3 w-3" />
+                        {p.location}
+                      </div>
+                      <span className="mt-3 text-secondary text-sm font-heading font-semibold">Click for Details →</span>
+                    </div>
                   </div>
                   <div className="p-5">
                     <span className="text-xs font-heading font-semibold text-secondary uppercase tracking-wide">{p.category}</span>
-                    <h3 className="font-heading font-semibold text-foreground mt-1 mb-2">{p.title}</h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">{p.desc}</p>
+                    <h3 className="font-heading font-semibold text-foreground mt-1 mb-1">{p.title}</h3>
+                    <p className="text-xs text-muted-foreground flex items-center gap-1"><MapPin className="h-3 w-3" />{p.location}</p>
                   </div>
                 </button>
               </ScrollAnimation>

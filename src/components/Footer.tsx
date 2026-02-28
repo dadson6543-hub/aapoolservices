@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 
 const Footer = () => (
@@ -14,9 +14,14 @@ const Footer = () => (
               AA Pool Service
             </span>
           </Link>
-          <p className="text-sm opacity-80 leading-relaxed">
+          <p className="text-sm opacity-80 leading-relaxed mb-4">
             Lahore's premier swimming pool construction, maintenance, and filtration experts. Serving DHA and surrounding areas with excellence.
           </p>
+          <div className="flex items-center gap-3">
+            <a href="https://www.facebook.com/profile.php?id=61586311246809" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-footer-foreground/10 hover:bg-secondary flex items-center justify-center transition-colors" aria-label="Facebook">
+              <Facebook className="h-4 w-4" />
+            </a>
+          </div>
         </div>
 
         {/* Quick Links */}
