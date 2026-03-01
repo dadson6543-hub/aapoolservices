@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, Send, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, Facebook, Instagram, Youtube } from "lucide-react";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import SEOHead from "@/components/SEOHead";
 import { toast } from "sonner";
@@ -154,7 +154,10 @@ const Contact = () => {
                     <a href="https://www.instagram.com/aapools?igsh=MTF5dXp2YWl0Mjh5aw==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 gradient-primary flex items-center justify-center hover:opacity-90 transition-opacity" aria-label="Instagram">
                       <Instagram className="h-4 w-4 text-primary-foreground" />
                     </a>
-                  </div>
+                    <a href="https://youtube.com/@aapoolservices?si=4Hc7oyyZW313P9yY" target="_blank" rel="noopener noreferrer" className="w-10 h-10 gradient-primary flex items-center justify-center hover:opacity-90 transition-opacity" aria-label="YouTube">
+                      <Youtube className="h-4 w-4 text-primary-foreground" />
+                    </a>
+                   </div>
                 </div>
 
                 {/* Google Map */}

@@ -9,7 +9,6 @@ import heroImg2 from "@/assets/hero-pool-2.jpg";
 import heroImg3 from "@/assets/hero-pool-3.jpg";
 import constructionImg from "@/assets/pool-construction.jpg";
 import cleaningImg from "@/assets/pool-cleaning.jpg";
-import filtrationImg from "@/assets/filtration-plant.jpg";
 import renovationImg from "@/assets/pool-renovation.jpg";
 
 const heroSlides = [heroImg1, heroImg2, heroImg3];
@@ -17,7 +16,6 @@ const heroSlides = [heroImg1, heroImg2, heroImg3];
 const featuredServices = [
   { title: "Pool Construction", desc: "Custom-built swimming pools designed to your specifications with premium materials.", img: constructionImg, slug: "pool-construction" },
   { title: "Pool Maintenance", desc: "Regular cleaning and maintenance to keep your pool crystal clear year-round.", img: cleaningImg, slug: "pool-cleaning" },
-  { title: "Filtration Systems", desc: "Advanced water filtration plant installation for pure, safe swimming water.", img: filtrationImg, slug: "filtration-plant" },
   { title: "Pool Renovation", desc: "Transform your existing pool with modern tiles, lighting, and premium finishes.", img: renovationImg, slug: "pool-renovation" },
 ];
 
@@ -150,7 +148,7 @@ const Index = () => {
             <p className="section-subtitle">End-to-end pool solutions tailored to your needs</p>
           </div>
         </ScrollAnimation>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredServices.map((s, i) => (
             <ScrollAnimation key={s.slug} delay={i * 0.1}>
               <Link to="/services" className="block bg-card card-slight-radius overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 group">
