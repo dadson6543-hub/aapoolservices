@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 
 const Footer = () => (
@@ -23,6 +23,9 @@ const Footer = () => (
             </a>
             <a href="https://www.instagram.com/aapools?igsh=MTF5dXp2YWl0Mjh5aw==" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-footer-foreground/10 hover:bg-secondary flex items-center justify-center transition-colors" aria-label="Instagram">
               <Instagram className="h-4 w-4" />
+            </a>
+            <a href="https://youtube.com/@aapoolservices?si=4Hc7oyyZW313P9yY" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-footer-foreground/10 hover:bg-secondary flex items-center justify-center transition-colors" aria-label="YouTube">
+              <Youtube className="h-4 w-4" />
             </a>
           </div>
         </div>

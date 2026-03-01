@@ -4,7 +4,6 @@ import SEOHead from "@/components/SEOHead";
 import constructionImg from "@/assets/pool-construction.jpg";
 import renovationImg from "@/assets/pool-renovation.jpg";
 import cleaningImg from "@/assets/pool-cleaning.jpg";
-import filtrationImg from "@/assets/filtration-plant.jpg";
 import equipmentImg from "@/assets/pool-equipment.jpg";
 import leakImg from "@/assets/pool-leak.jpg";
 import lightingImg from "@/assets/pool-lighting.jpg";
@@ -31,13 +30,6 @@ const services = [
     img: cleaningImg,
     features: ["Weekly/monthly cleaning plans", "Chemical balancing", "Filter maintenance", "Equipment inspection"],
     benefits: "Regular maintenance extends the life of your pool and equipment while ensuring a healthy swimming environment.",
-  },
-  {
-    title: "Water Filtration Plant Installation",
-    desc: "We install commercial-grade water filtration systems that keep your pool water crystal clear and free from contaminants. Our systems are energy-efficient and low-maintenance.",
-    img: filtrationImg,
-    features: ["Sand & cartridge filters", "Multi-stage purification", "Energy-efficient pumps", "Automated systems"],
-    benefits: "A quality filtration system reduces chemical usage and ensures consistently clean, safe water.",
   },
   {
     title: "Pool Equipment Installation",
