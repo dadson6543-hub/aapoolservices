@@ -22,7 +22,7 @@ const featuredServices = [
 const whyChooseUs = [
   { icon: Shield, title: "Licensed & Insured", desc: "Fully certified team with comprehensive insurance coverage." },
   { icon: Star, title: "Premium Quality", desc: "We use only the finest materials and latest construction techniques." },
-  { icon: CheckCircle, title: "10+ Years Experience", desc: "Decade of expertise serving DHA Lahore and surrounding areas." },
+  { icon: CheckCircle, title: "25+ Years Experience", desc: "Decade of expertise serving DHA Lahore and surrounding areas." },
   { icon: Phone, title: "24/7 Support", desc: "Emergency pool services available whenever you need us." },
 ];
 
