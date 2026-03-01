@@ -8,6 +8,7 @@ import equipmentImg from "@/assets/pool-equipment.jpg";
 import leakImg from "@/assets/pool-leak.jpg";
 import lightingImg from "@/assets/pool-lighting.jpg";
 import chemicalImg from "@/assets/pool-chemical.jpg";
+import rgbLightsImg from "@/assets/pool-rgb-lights.jpg";
 
 const services = [
   {
@@ -58,6 +59,13 @@ const services = [
     img: chemicalImg,
     features: ["pH balancing", "Chlorine management", "Algae prevention", "Water testing"],
     benefits: "Proper chemical balance protects swimmers' health and preserves your pool's surfaces and equipment.",
+  },
+  {
+    title: "RGB Lights with Remote Control Installation",
+    desc: "Elevate your pool's ambiance with professional RGB LED lighting systems featuring wireless remote control. Choose from millions of colors, dynamic color-changing modes, and preset lighting scenes to create the perfect atmosphere for any occasion — from relaxing evenings to vibrant pool parties.",
+    img: rgbLightsImg,
+    features: ["RGB color-changing with 16+ colors", "Wireless remote control included", "Dynamic modes: fade, flash, strobe, smooth", "IP68 waterproof rating", "Energy-efficient LED technology", "12V safe low-voltage operation"],
+    benefits: "RGB remote-controlled lights let you customize your pool's look instantly — perfect for parties, romantic evenings, or everyday luxury. They consume 85% less energy than traditional bulbs and last 50,000+ hours.",
   },
 ];
 

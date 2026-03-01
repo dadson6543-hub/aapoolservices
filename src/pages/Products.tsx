@@ -115,7 +115,8 @@ const brandProducts = [
   },
 ];
 
-const aaProducts = [
+const allProducts: Product[] = [
+  ...brandProducts,
   {
     id: 101,
     name: "AA Pool Pump – Turbo Series",
@@ -124,6 +125,8 @@ const aaProducts = [
     shortDesc: "High-performance swimming pool circulation pump with energy-efficient motor.",
     description: "The AA Pool Pump Turbo Series is designed for maximum water flow and energy efficiency. Built with a corrosion-resistant body and a powerful motor, this pump ensures crystal-clear water circulation for residential and commercial pools.",
     features: ["Self-priming design", "Corrosion-resistant body", "Energy-efficient motor", "Built-in strainer basket", "Low noise operation", "Suitable for pools up to 80,000 liters"],
+    benefits: "Reliable and affordable pool circulation trusted by hundreds of clients across Pakistan.",
+    usage: "Widely used in our residential pool projects in DHA, Bahria Town, and Cantt Area.",
     category: "Pool Pumps",
   },
   {
@@ -134,6 +137,8 @@ const aaProducts = [
     shortDesc: "Professional-grade LASWIM pool pump for heavy-duty filtration and circulation.",
     description: "The AA Pool LASWIM Pro pump delivers industry-leading performance for large residential and commercial swimming pools. With a high-capacity strainer and robust motor, it handles demanding filtration requirements.",
     features: ["Heavy-duty construction", "High-capacity strainer", "2HP powerful motor", "Commercial-grade performance", "Easy maintenance access", "Compatible with all filtration systems"],
+    benefits: "Built for demanding commercial applications where reliability is non-negotiable.",
+    usage: "Installed in commercial pools in Gulberg, Model Town, and hotel projects across Lahore.",
     category: "Pool Pumps",
   },
   {
@@ -144,6 +149,8 @@ const aaProducts = [
     shortDesc: "Elegant pool waterfall feature with adjustable flow for stunning visual effects.",
     description: "Transform your swimming pool into a luxury oasis with the AA Pool Waterfall Cascade Edition. Made from durable stainless steel with PVC connectors for easy installation.",
     features: ["Stainless steel construction", "Adjustable water flow", "Easy PVC installation", "LED-compatible design", "Rust-proof materials", "Multiple width options available"],
+    benefits: "Adds resort-style luxury to any pool with minimal installation effort.",
+    usage: "Featured in farmhouse and luxury residential pools across Lahore and Islamabad.",
     category: "Water Features",
   },
   {
@@ -152,8 +159,10 @@ const aaProducts = [
     brand: "AA Pool Service",
     image: productWaterfallBlade,
     shortDesc: "Multi-color LED waterfall blade with remote control for dramatic pool lighting.",
-    description: "The AA Pool Waterfall Blade LED Series combines water flow with stunning LED illumination. Featuring RGB color-changing lights controlled via remote.",
+    description: "The AA Pool Waterfall Blade LED Series combines water flow with stunning LED illumination. Featuring RGB color-changing lights controlled via remote for dramatic visual effects.",
     features: ["RGB LED illumination", "Remote control included", "Waterproof IP68 rating", "Multiple color modes", "Complete installation kit", "Low voltage safe operation"],
+    benefits: "The ultimate combination of water features and lighting for unforgettable pool aesthetics.",
+    usage: "A top seller for our premium pool projects in DHA Phase 8 and Bedian Road.",
     category: "Water Features",
   },
   {
@@ -164,6 +173,8 @@ const aaProducts = [
     shortDesc: "High-brightness underwater LED pool light with warm and cool color options.",
     description: "Illuminate your pool with the AA Pool Underwater Light Premium. Featuring high-brightness LED technology with IP68-rated housing for complete waterproof protection.",
     features: ["High-brightness LED chips", "IP68 waterproof rating", "Warm & cool color modes", "Stainless steel housing", "Long lifespan (50,000+ hours)", "Easy retrofit installation"],
+    benefits: "Brilliant illumination at a fraction of the energy cost of traditional pool lights.",
+    usage: "Our most popular lighting product, installed in pools across Johar Town, Lake City, and DHA.",
     category: "Pool Lighting",
   },
 ];
@@ -241,35 +252,18 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Premium Brand Products */}
+      {/* All Products */}
       <section className="section-padding bg-background">
         <div className="container-max">
           <ScrollAnimation>
             <div className="text-center mb-12">
-              <h2 className="section-title">Premium Brand Equipment</h2>
-              <p className="section-subtitle">World-class pool equipment from AstralPool, Emaux & Minder</p>
+              <h2 className="section-title">Our Complete Product Range</h2>
+              <p className="section-subtitle">Premium equipment from AstralPool, Emaux, Minder & AA Pool Service</p>
             </div>
           </ScrollAnimation>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {brandProducts.map((product, i) => (
-              <ProductCard key={product.id} product={product} delay={i * 0.08} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* AA Pool Service Products */}
-      <section className="section-padding bg-muted">
-        <div className="container-max">
-          <ScrollAnimation>
-            <div className="text-center mb-12">
-              <h2 className="section-title">AA Pool Service Equipment</h2>
-              <p className="section-subtitle">Our branded pool equipment trusted by clients across Pakistan</p>
-            </div>
-          </ScrollAnimation>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {aaProducts.map((product, i) => (
-              <ProductCard key={product.id} product={product as Product} delay={i * 0.1} />
+            {allProducts.map((product, i) => (
+              <ProductCard key={product.id} product={product} delay={i * 0.05} />
             ))}
           </div>
         </div>
